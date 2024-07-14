@@ -35,9 +35,10 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 50),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFFF406C),
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                    textStyle: TextStyle(fontSize: 18),
+                    backgroundColor: Color(0xFFFF406C),
+                    padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                    textStyle: TextStyle(fontSize: 18, color: Colors.white),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -52,15 +53,16 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFFF406C),
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                    textStyle: TextStyle(fontSize: 18),
+                    backgroundColor: Color(0xFFFF406C),
+                    padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                    textStyle: TextStyle(fontSize: 18, color: Color(0xFFFFFFFF)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => RecommendationScreen(),
+                        builder: (context) => RecommendationScreen(supabaseClient: supabaseClient),
                       ),
                     );
                   },
