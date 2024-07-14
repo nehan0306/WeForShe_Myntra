@@ -1,0 +1,6 @@
+{
+  "categories": {
+    "Men": ["jeans", "track-pants", "shirts", "trousers", "tights", "tshirts", "jackets", "sweatshirts", "kurtas", "shorts", "kurta-sets", "sweaters", "tracksuits", "coats", "co-ords"],
+    "Women": ["tshirts", "tops", "kurta-sets", "jumpsuit", "kurtas", "trousers", "shirts", "shorts", "dresses", "track-pants", "tights", "jackets", "jeans", "sweatshirts", "skirts", "sweaters", "lehenga-choli", "coats", "tracksuits", "co-ords"]
+  }
+}

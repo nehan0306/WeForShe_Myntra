@@ -1,0 +1,482 @@
+{
+    "Men": {
+      "jeans": [
+        {
+          "question": "What recent fit style do you prefer for jeans?",
+          "options": ["Skinny", "Slim Tapered", "Relaxed Fit", "Straight Leg", "Baggy"]
+        },
+        {
+          "question": "How distressed do you prefer your jeans?",
+          "options": ["Lightly Distressed", "Heavily Distressed", "No Distress"]
+        },
+        {
+          "question": "What recent color trend do you prefer for jeans?",
+          "options": ["Classic Blue", "Black", "Grey", "White", "Light Wash"]
+        }
+      ],
+      "track-pants": [
+        {
+          "question": "What fit style do you prefer for track pants?",
+          "options": ["Slim Fit", "Jogger Style", "Tapered Fit", "Loose Fit"]
+        },
+        {
+          "question": "What design feature do you prefer for track pants?",
+          "options": ["Side Stripes", "Camo Print", "Solid Colors", "Color Blocking"]
+        },
+        {
+          "question": "What fabric do you prefer for track pants?",
+          "options": ["Cotton", "Polyester", "Nylon", "Spandex"]
+        }
+      ],
+      "shirts": [
+        {
+          "question": "What print style do you prefer for shirts?",
+          "options": ["Tropical", "Geometric", "Abstract", "Animal Print", "Floral"]
+        },
+        {
+          "question": "What fit style do you prefer for shirts?",
+          "options": ["Slim Fit", "Relaxed Fit", "Oversized", "Regular Fit"]
+        },
+        {
+          "question": "What sleeve style do you prefer for shirts?",
+          "options": ["Short Sleeves", "Long Sleeves", "Roll-Up Sleeves"]
+        }
+      ],
+      "trousers": [
+        {
+          "question": "What fit style do you prefer for trousers?",
+          "options": ["Slim Fit", "Relaxed Fit", "Tapered Fit", "Wide Leg"]
+        },
+        {
+          "question": "What pattern style do you prefer for trousers?",
+          "options": ["Checkered", "Striped", "Solid", "Houndstooth", "Plaid"]
+        },
+        {
+          "question": "What color do you prefer for trousers?",
+          "options": ["Classic Black", "Beige", "Olive Green", "Navy", "Bold Colors"]
+        }
+      ],
+      "tights": [
+        {
+          "question": "What compression level do you prefer for tights?",
+          "options": ["High Compression", "Medium Compression", "Low Compression"]
+        },
+        {
+          "question": "What waist style do you prefer for tights?",
+          "options": ["High Waist", "Mid Waist", "Low Waist"]
+        },
+        {
+          "question": "What feature do you prefer in tights?",
+          "options": ["Moisture-Wicking", "Breathable", "Stretchable", "Pockets"]
+        }
+      ],
+      "tshirts": [
+        {
+          "question": "What print style do you prefer for T-shirts?",
+          "options": ["Graphic Prints", "Tie-Dye", "Minimalist", "Bold Logos", "Abstract"]
+        },
+        {
+          "question": "What fit style do you prefer for T-shirts?",
+          "options": ["Slim Fit", "Regular Fit", "Oversized", "Muscle Fit"]
+        },
+        {
+          "question": "What neck style do you prefer for T-shirts?",
+          "options": ["Crew Neck", "V-Neck", "Henley", "Mock Neck"]
+        }
+      ],
+      "jackets": [
+        {
+          "question": "What jacket style do you prefer?",
+          "options": ["Bomber", "Denim", "Leather", "Windbreaker", "Puffer"]
+        },
+        {
+          "question": "What material do you prefer for jackets?",
+          "options": ["Leather", "Denim", "Nylon", "Faux Fur"]
+        },
+        {
+          "question": "What color do you prefer for jackets?",
+          "options": ["Black", "Olive", "Navy", "Bright Colors", "Pastel Colors"]
+        }
+      ],
+      "sweatshirts": [
+        {
+          "question": "What design feature do you prefer for sweatshirts?",
+          "options": ["Graphic Prints", "Minimalist", "Color Blocking", "Tie-Dye", "Logo Prints"]
+        },
+        {
+          "question": "What fit style do you prefer for sweatshirts?",
+          "options": ["Slim Fit", "Regular Fit", "Oversized", "Cropped"]
+        },
+        {
+          "question": "What neck style do you prefer for sweatshirts?",
+          "options": ["Crew Neck", "Hooded", "Mock Neck", "Zip-Up"]
+        }
+      ],
+      "kurtas": [
+        {
+          "question": "What length do you prefer for kurtas?",
+          "options": ["Short", "Knee-Length", "Long"]
+        },
+        {
+          "question": "What pattern style do you prefer for kurtas?",
+          "options": ["Solid", "Printed", "Embroidered", "Striped", "Geometric"]
+        },
+        {
+          "question": "What color do you prefer for kurtas?",
+          "options": ["White", "Pastel", "Bright", "Earthy Tones", "Dual Tone"]
+        }
+      ],
+      "shorts": [
+        {
+          "question": "What length do you prefer for shorts?",
+          "options": ["Above Knee", "Knee Length", "Below Knee"]
+        },
+        {
+          "question": "What fit style do you prefer for shorts?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        },
+        {
+          "question": "What design feature do you prefer for shorts?",
+          "options": ["Solid", "Printed", "Camo", "Striped", "Color Blocking"]
+        }
+      ],
+      "kurta-sets": [
+        {
+          "question": "What pattern style do you prefer for kurta sets?",
+          "options": ["Solid", "Printed", "Embroidered", "Striped"]
+        },
+        {
+          "question": "What fit style do you prefer for kurta sets?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        },
+        {
+          "question": "What color do you prefer for kurta sets?",
+          "options": ["Light", "Dark", "Bright", "Pastel"]
+        }
+      ],
+      "sweaters": [
+        {
+          "question": "What pattern style do you prefer for sweaters?",
+          "options": ["Solid", "Striped", "Geometric", "Fair Isle", "Cable Knit"]
+        },
+        {
+          "question": "What fit style do you prefer for sweaters?",
+          "options": ["Slim Fit", "Regular Fit", "Oversized"]
+        },
+        {
+          "question": "What neck style do you prefer for sweaters?",
+          "options": ["Crew Neck", "V-Neck", "Turtleneck", "Mock Neck"]
+        }
+      ],
+      "tracksuits": [
+        {
+          "question": "What style do you prefer for tracksuits?",
+          "options": ["Athletic", "Casual", "Color Blocked", "Minimalist", "Retro"]
+        },
+        {
+          "question": "What color do you prefer for tracksuits?",
+          "options": ["Black", "Grey", "Navy", "Bright Colors", "Pastel Colors"]
+        },
+        {
+          "question": "What fit style do you prefer for tracksuits?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        }
+      ],
+      "coats": [
+        {
+          "question": "What length do you prefer for coats?",
+          "options": ["Short", "Mid-Length", "Long"]
+        },
+        {
+          "question": "What fit style do you prefer for coats?",
+          "options": ["Slim Fit", "Regular Fit", "Oversized"]
+        },
+        {
+          "question": "What material do you prefer for coats?",
+          "options": ["Wool", "Cotton", "Leather", "Synthetic"]
+        }
+      ],
+      "co-ords": [
+        {
+          "question": "What fit style do you prefer for co-ords?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        },
+        {
+          "question": "What pattern style do you prefer for co-ords?",
+          "options": ["Solid", "Striped", "Printed", "Checked"]
+        },
+        {
+          "question": "What color do you prefer for co-ords?",
+          "options": ["Monochrome", "Pastel", "Bright Colors", "Neutral"]
+        }
+      ]
+    },
+    "Women": {
+      "tshirts": [
+        {
+          "question": "What print style do you prefer for T-shirts?",
+          "options": ["Graphic Prints", "Floral", "Minimalist", "Bold Logos", "Tie-Dye"]
+        },
+        {
+          "question": "What fit style do you prefer for T-shirts?",
+          "options": ["Slim Fit", "Regular Fit", "Oversized", "Cropped"]
+        },
+        {
+          "question": "What neck style do you prefer for T-shirts?",
+          "options": ["Crew Neck", "V-Neck", "Scoop Neck", "Boat Neck"]
+        }
+      ],
+      "tops": [
+        {
+          "question": "What design feature do you prefer for tops?",
+          "options": ["Ruffled", "Off-Shoulder", "Cold Shoulder", "Wrap", "Peplum"]
+        },
+        {
+          "question": "What sleeve style do you prefer for tops?",
+          "options": ["Bell Sleeves", "Puff Sleeves", "Sleeveless", "Cap Sleeves", "Long Sleeves"]
+        },
+        {
+          "question": "What pattern style do you prefer for tops?",
+          "options": ["Floral", "Polka Dots", "Abstract", "Animal Print", "Stripes"]
+        }
+      ],
+      "kurta-sets": [
+        {
+          "question": "What pattern style do you prefer for kurta sets?",
+          "options": ["Solid", "Printed", "Embroidered", "Striped"]
+        },
+        {
+          "question": "What fit style do you prefer for kurta sets?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        },
+        {
+          "question": "What color do you prefer for kurta sets?",
+          "options": ["Light", "Dark", "Bright", "Pastel"]
+        }
+      ],
+      "jumpsuit": [
+        {
+          "question": "What fit style do you prefer for jumpsuits?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        },
+        {
+          "question": "What length do you prefer for jumpsuits?",
+          "options": ["Short", "Ankle Length", "Full Length"]
+        },
+        {
+          "question": "What pattern style do you prefer for jumpsuits?",
+          "options": ["Solid", "Striped", "Floral", "Geometric"]
+        }
+      ],
+      "kurtas": [
+        {
+          "question": "What length do you prefer for kurtas?",
+          "options": ["Short", "Knee-Length", "Long"]
+        },
+        {
+          "question": "What pattern style do you prefer for kurtas?",
+          "options": ["Solid", "Printed", "Embroidered", "Striped"]
+        },
+        {
+          "question": "What collar style do you prefer for kurtas?",
+          "options": ["Mandarin Collar", "Round Neck", "V-Neck"]
+        }
+      ],
+      "trousers": [
+        {
+          "question": "What fit style do you prefer for trousers?",
+          "options": ["Slim Fit", "Relaxed Fit", "Tapered Fit", "Wide Leg"]
+        },
+        {
+          "question": "What color do you prefer for trousers?",
+          "options": ["Classic Black", "Beige", "Olive Green", "Navy", "Bold Colors"]
+        },
+        {
+          "question": "What pattern style do you prefer for trousers?",
+          "options": ["Checkered", "Striped", "Solid", "Houndstooth", "Plaid"]
+        }
+      ],
+      "shirts": [
+        {
+          "question": "What print style do you prefer for shirts?",
+          "options": ["Tropical", "Geometric", "Abstract", "Animal Print", "Floral"]
+        },
+        {
+          "question": "What fit style do you prefer for shirts?",
+          "options": ["Slim Fit", "Regular Fit", "Relaxed Fit"]
+        },
+        {
+          "question": "What collar style do you prefer for shirts?",
+          "options": ["Spread Collar", "Button-Down Collar", "Mandarin Collar", "Club Collar"]
+        }
+      ],
+      "shorts": [
+        {
+          "question": "What length do you prefer for shorts?",
+          "options": ["Above Knee", "Knee Length", "Below Knee"]
+        },
+        {
+          "question": "What fit style do you prefer for shorts?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        },
+        {
+          "question": "What design feature do you prefer for shorts?",
+          "options": ["Solid", "Printed", "Camo", "Striped", "Color Blocking"]
+        }
+      ],
+      "dresses": [
+        {
+          "question": "What length do you prefer for dresses?",
+          "options": ["Mini", "Midi", "Maxi", "Knee-Length"]
+        },
+        {
+          "question": "What pattern style do you prefer for dresses?",
+          "options": ["Solid", "Floral", "Stripes", "Polka Dots", "Geometric"]
+        },
+        {
+          "question": "What neck style do you prefer for dresses?",
+          "options": ["V-Neck", "Round Neck", "Square Neck", "Off-Shoulder", "High Neck"]
+        }
+      ],
+      "track-pants": [
+        {
+          "question": "What fit style do you prefer for track pants?",
+          "options": ["Slim Fit", "Jogger Style", "Tapered Fit", "Loose Fit"]
+        },
+        {
+          "question": "What design feature do you prefer for track pants?",
+          "options": ["Side Stripes", "Camo Print", "Solid Colors", "Color Blocking"]
+        },
+        {
+          "question": "What fabric do you prefer for track pants?",
+          "options": ["Cotton", "Polyester", "Nylon", "Spandex"]
+        }
+      ],
+      "tights": [
+        {
+          "question": "What design feature do you prefer for tights?",
+          "options": ["Solid Colors", "Camo Print", "Geometric Patterns", "Color Blocking"]
+        },
+        {
+          "question": "What color do you prefer for tights?",
+          "options": ["Black", "Navy", "Grey", "Bright Colors"]
+        },
+        {
+          "question": "What feature do you prefer in tights?",
+          "options": ["Pockets", "High Compression", "Moisture-Wicking", "Mesh Panels"]
+        }
+      ],
+      "jackets": [
+        {
+          "question": "What style do you prefer for jackets?",
+          "options": ["Bomber", "Denim", "Leather", "Windbreaker", "Puffer"]
+        },
+        {
+          "question": "What material do you prefer for jackets?",
+          "options": ["Leather", "Denim", "Nylon", "Faux Fur"]
+        },
+        {
+          "question": "What color do you prefer for jackets?",
+          "options": ["Black", "Olive", "Navy", "Bright Colors", "Pastel Colors"]
+        }
+      ],
+      "sweatshirts": [
+        {
+          "question": "What design feature do you prefer for sweatshirts?",
+          "options": ["Graphic Prints", "Minimalist", "Color Blocking", "Tie-Dye", "Logo Prints"]
+        },
+        {
+          "question": "What fit style do you prefer for sweatshirts?",
+          "options": ["Slim Fit", "Regular Fit", "Oversized", "Cropped"]
+        },
+        {
+          "question": "What neck style do you prefer for sweatshirts?",
+          "options": ["Crew Neck", "Hooded", "Mock Neck", "Zip-Up"]
+        }
+      ],
+      "skirts": [
+        {
+          "question": "What length do you prefer for skirts?",
+          "options": ["Mini", "Knee-Length", "Midi", "Maxi"]
+        },
+        {
+          "question": "What pattern style do you prefer for skirts?",
+          "options": ["Solid", "Floral", "Polka Dots", "Striped", "Plaid"]
+        },
+        {
+          "question": "What fit style do you prefer for skirts?",
+          "options": ["Slim Fit", "Regular Fit", "A-Line", "Pleated"]
+        }
+      ],
+      "sweaters": [
+        {
+          "question": "What pattern style do you prefer for sweaters?",
+          "options": ["Solid", "Striped", "Geometric", "Fair Isle", "Cable Knit"]
+        },
+        {
+          "question": "What fit style do you prefer for sweaters?",
+          "options": ["Slim Fit", "Regular Fit", "Oversized"]
+        },
+        {
+          "question": "What neck style do you prefer for sweaters?",
+          "options": ["Crew Neck", "V-Neck", "Turtleneck", "Mock Neck"]
+        }
+      ],
+      "lehenga-choli": [
+        {
+          "question": "What design feature do you prefer for lehenga choli?",
+          "options": ["Heavy Embroidery", "Minimalist", "Printed", "Zari Work"]
+        },
+        {
+          "question": "What color do you prefer for lehenga choli?",
+          "options": ["Traditional Red", "Pastel Shades", "Bright Colors", "Dual Tones"]
+        },
+        {
+          "question": "What fabric do you prefer for lehenga choli?",
+          "options": ["Silk", "Georgette", "Velvet", "Chiffon"]
+        }
+      ],
+      "coats": [
+        {
+          "question": "What length do you prefer for coats?",
+          "options": ["Short", "Mid-Length", "Long"]
+        },
+        {
+          "question": "What fit style do you prefer for coats?",
+          "options": ["Slim Fit", "Regular Fit", "Oversized"]
+        },
+        {
+          "question": "What material do you prefer for coats?",
+          "options": ["Wool", "Cotton", "Leather", "Synthetic"]
+        }
+      ],
+      "tracksuits": [
+        {
+          "question": "What style do you prefer for tracksuits?",
+          "options": ["Athletic", "Casual", "Color Blocked", "Minimalist", "Retro"]
+        },
+        {
+          "question": "What color do you prefer for tracksuits?",
+          "options": ["Black", "Grey", "Navy", "Bright Colors", "Pastel Colors"]
+        },
+        {
+          "question": "What fit style do you prefer for tracksuits?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        }
+      ],
+      "co-ords": [
+        {
+          "question": "What fit style do you prefer for co-ords?",
+          "options": ["Slim Fit", "Regular Fit", "Loose Fit"]
+        },
+        {
+          "question": "What pattern style do you prefer for co-ords?",
+          "options": ["Solid", "Striped", "Printed", "Checked"]
+        },
+        {
+          "question": "What color do you prefer for co-ords?",
+          "options": ["Monochrome", "Pastel", "Bright Colors", "Neutral"]
+        }
+      ]
+    }
+  }
