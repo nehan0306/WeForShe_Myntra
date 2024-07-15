@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   supabase_flutter: ^2.5.8
   http: ^1.2.1
+  flutter_svg: ^1.0.3
+  carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +69,8 @@ flutter:
       - assets/questions.json
       - assets/images/myntra_logo.png
       - assets/images/screen_bg.png
+      - assets/banner.jpg
+      - assets/myntra.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
