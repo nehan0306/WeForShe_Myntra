@@ -3,6 +3,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/question.dart';
 import '../utils/question_loader.dart';
 import 'results_screen.dart';
+import 'order_confirm_screen.dart';
+import 'custom_bottom_nav_bar.dart';
 
 class QuestionScreen extends StatefulWidget {
   final SupabaseClient supabaseClient;
@@ -98,7 +100,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Questions for ${widget.mainCategory} - ${widget.subCategory}'),
+        title: Text('TrendTune Feedback of ${widget.mainCategory} - ${widget.subCategory}'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -114,13 +116,21 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
                 ),
                 ...question.options.map((option) {
-                  return CheckboxListTile(
+                  return Container(
+                      margin: EdgeInsets.symmetric(vertical: 5.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Color(0xFF888888)),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                  child:  CheckboxListTile(
+                    controlAffinity: ListTileControlAffinity.leading,
+                    activeColor: Color(0xFFFF406C),
                     title: Text(option),
                     value: question.selectedOptions.contains(option),
                     onChanged: (bool? value) {
                       _toggleOption(question, option);
                     },
-                  );
+                  ));
                 }).toList(),
                 SizedBox(height: 20),
               ],
@@ -128,10 +138,18 @@ class _QuestionScreenState extends State<QuestionScreen> {
           },
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color(0xFFFF406C),
+          foregroundColor: Color(0xFFF5F5F5),
+          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+          textStyle: TextStyle(fontSize: 18, color: Colors.white),
+        ),
         onPressed: _saveDataAndNavigate,
-        child: Icon(Icons.arrow_forward),
+        child: Text('Discover Insights'),
       ),
+      bottomNavigationBar: CustomBottomNavBar(supabaseClient: widget.supabaseClient, currentIndex: 1),
     );
   }
 }

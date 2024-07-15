@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'recommendation_screen.dart';
+import 'custom_bottom_nav_bar.dart';
 
 class ResultsScreen extends StatefulWidget {
   final SupabaseClient supabaseClient;
@@ -120,35 +122,102 @@ class _ResultsScreenState extends State<ResultsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Results for ${widget.mainCategory} - ${widget.subCategory}'),
+        title: Text('Insights for ${widget.mainCategory} - ${widget.subCategory}'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: _results.isEmpty
             ? Center(child: CircularProgressIndicator())
-            : ListView.builder(
-          itemCount: _results.length,
-          itemBuilder: (context, index) {
-            final question = _results.keys.elementAt(index);
-            final options = _results[question]!;
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  question,
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                ),
-                ...options.entries.map((entry) {
-                  return Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: Text('${entry.key}: ${entry.value.toStringAsFixed(2)}%', style: TextStyle(fontSize: 18.0)));
-                  }).toList(),
-                SizedBox(height: 20),
-              ],
-            );
-          },
+            : Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: _results.length,
+                itemBuilder: (context, index) {
+                  final question = _results.keys.elementAt(index);
+                  final options = _results[question]!;
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        question,
+                        style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                      ),
+                      ...options.entries.map((entry) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Radio(
+                                    value: entry.key,
+                                    groupValue: null,
+                                    onChanged: null,
+                                    activeColor: Color(0xFFFF406C),
+                                  ),
+                                  Text(
+                                    entry.key,
+                                    style: TextStyle(fontSize: 18.0),
+                                  ),
+                                ],
+                              ),
+                              Stack(
+                                children: [
+                                  Container(
+                                    height: 10,
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[300],
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                  ),
+                                  Container(
+                                    height: 10,
+                                    width: MediaQuery.of(context).size.width * (entry.value / 100),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFFF406C),
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 5),
+                              Text(
+                                '${entry.value.toStringAsFixed(2)}%',
+                                style: TextStyle(fontSize: 18.0),
+                              ),
+                            ],
+                          ),
+                        );
+                      }).toList(),
+                      SizedBox(height: 20),
+                    ],
+                  );
+                },
+              ),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFFFF406C),
+                foregroundColor: Color(0xFFF5F5F5),
+                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                textStyle: TextStyle(fontSize: 18, color: Colors.white),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RecommendationScreen(supabaseClient: widget.supabaseClient),
+                  ),
+                );
+              },
+              child: Text('Unlock Trends'),
+            ),
+          ],
         ),
       ),
+      bottomNavigationBar: CustomBottomNavBar(supabaseClient: widget.supabaseClient, currentIndex: 1),
     );
   }
 }
