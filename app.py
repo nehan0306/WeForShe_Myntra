@@ -2,11 +2,12 @@ from flask import Flask, request, jsonify
 import tensorflow as tf
 from flask_cors import CORS
 from supabase import create_client, Client
+import pandas as pd
 
 app = Flask(__name__)
 CORS(app)
 
-model = tf.saved_model.load(r'C:\recommender_app\weforshe-model-demo')
+model = tf.saved_model.load(r'C:\recommender_app\myntra-recommender-model')
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
@@ -14,19 +15,39 @@ def recommend():
         data = request.json
         user_id = data['user_id']
         gender = data['gender']
+        if gender == "Female":
+            gender = "Women"
+        elif gender == "Male":
+            gender = "Men"
+        print("User ID: ", user_id, "\nGender:", gender)
 
         scores, recommendations = model([user_id])
         temp = recommendations.numpy().tolist()[0]
+
+        top_categories = fetch_and_analyze_reviews('Women')
+        print("Top_category: ", top_categories)
+
+        df = pd.read_csv('C:/recommender_app/assets/myntra-products.csv')
         result = []
-        for i in temp:
-            result.append(str(i)[2:-1])
-        print(recommendations[0, :3], "recommendations")
+        for rec in temp:
+            product = str(rec)[2:-1]
+            filtered_df = df[df['Description'] == product]
 
-        print(test_connection())
-        top_category = fetch_and_analyze_reviews('Women')
-        print(top_category)
+            if not filtered_df.empty:
+                category = filtered_df['Individual_category'].iloc[0]
+                product_gender = filtered_df['category_by_Gender'].iloc[0]
 
-        return jsonify(result)
+                if gender == product_gender and category in top_categories:
+                    result.insert(0, product.title())
+                elif gender == product_gender:
+                    result.append(product.title())
+
+        if (len(result) >= 10):
+            recommend = result[:10]
+        else:
+            recommend = result
+
+        return jsonify(recommend)
     except Exception as e:
         print(f"Error: {e}")
         return jsonify({"error": str(e)}), 400
@@ -44,19 +65,17 @@ SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 def fetch_and_analyze_reviews(gender):
-    response = supabase.from_("results").select("*").order("percentage", desc=True).execute()
+    try:
+        response = supabase.from_("results").select("*").order("percentage", desc=True).execute()
+        reviews = response.data
 
-    reviews = response.data
-#     print(reviews, "reviews")
+        df_helper = pd.DataFrame(reviews)
+        gender_filtered_reviews = df_helper[df_helper['gender'] == gender]
+        top_categories = gender_filtered_reviews['product'].unique()[:3]
 
-    gender_filtered_reviews = [review for review in reviews if review['gender'] == gender]
-
-    if not gender_filtered_reviews:
-        return "No data available"
-
-    top_category = gender_filtered_reviews[0]['option']
-
-    return top_category
+        return list(top_categories)
+    except:
+        return []
 
 if __name__ == '__main__':
   app.run(debug=True)
